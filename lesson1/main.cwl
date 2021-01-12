@@ -1,5 +1,5 @@
 cwlVersion: v1.0
-label: CWL training workflow
+label: CWL training workflow ABC
 class: Workflow
 inputs:
   message: string
