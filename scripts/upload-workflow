@@ -3,8 +3,11 @@ set -e
 FILE=$1
 DIR=$(dirname $FILE)
 . $(dirname $0)/setup-env
+if test -s $DIR/defaults.yaml ; then
+    DEFAULTS=$DIR/defaults.yaml
+fi
 if test -s $DIR/WORKFLOW_UUID ; then
-  arvados-cwl-runner --update-workflow $(cat $DIR/WORKFLOW_UUID) $FILE
+  arvados-cwl-runner --update-workflow $(cat $DIR/WORKFLOW_UUID) $FILE $DEFAULTS
 else
-  arvados-cwl-runner --create-workflow $FILE > $DIR/WORKFLOW_UUID
+  arvados-cwl-runner --create-workflow $FILE $DEFAULTS > $DIR/WORKFLOW_UUID
 fi

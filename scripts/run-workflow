@@ -3,8 +3,7 @@ set -e
 FILE=$1
 DIR=$(dirname $FILE)
 . $(dirname $0)/setup-env
-if ! test -s $DIR/WORKFLOW_UUID ; then
-  arvados-cwl-runner --create-workflow $FILE > $DIR/WORKFLOW_UUID
+if test -s $DIR/input.yaml ; then
+    INPUT=$DIR/input.yaml
 fi
-shift
-arvados-cwl-runner arvwf:$(cat $DIR/WORKFLOW_UUID) $FILE "$@"
+arvados-cwl-runner $FILE $INPUT
