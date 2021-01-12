@@ -3,10 +3,13 @@ label:  CWL training lesson 2
 class: Workflow
 inputs:
   message: File
-outputs: []
+outputs:
+  reversed:
+    type: File
+    outputSource: rev/reversed
 steps:
   rev:
     in:
       message: message
-    out: []
+    out: [reversed]
     run: rev.cwl
