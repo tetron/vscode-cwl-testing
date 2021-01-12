@@ -4,13 +4,13 @@
         {
             "label": "Run CWL workflow on Arvados",
             "type": "shell",
-            "command": "scripts/run-workflow ${fileDirname}/input.yaml",
+            "command": "scripts/run-workflow ${file}",
             "problemMatcher": []
         },
         {
-            "label": "Upload CWL workflow to Arvados Workbench",
+            "label": "Register or update CWL workflow on Arvados Workbench",
             "type": "shell",
-            "command": "scripts/upload-workflow ${fileDirname}/input.yaml",
+            "command": "scripts/upload-workflow ${file}",
             "problemMatcher": []
         }
     ]
