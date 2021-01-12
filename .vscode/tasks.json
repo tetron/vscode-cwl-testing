@@ -4,7 +4,7 @@
         {
             "label": "run this CWL workflow",
             "type": "shell",
-            "command": "ARVADOS_API_HOST=$(cat ${workspaceFolder}/API_HOST) ARVADOS_API_TOKEN=$(cat ${workspaceFolder}/API_TOKEN) arvados-cwl-runner ${file}",
+            "command": "ARVADOS_API_HOST=$(cat ${workspaceFolder}/API_HOST) ARVADOS_API_TOKEN=$(cat ${workspaceFolder}/API_TOKEN) arvados-cwl-runner ${file} input.yaml",
             "problemMatcher": []
         },
         {
