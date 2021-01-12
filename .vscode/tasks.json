@@ -4,19 +4,19 @@
         {
             "label": "run this CWL workflow",
             "type": "shell",
-            "command": "ARVADOS_API_HOST=$(cat ${workspaceFolder}/API_HOST) ARVADOS_API_TOKEN=$(cat ${workspaceFolder}/API_TOKEN) arvados-cwl-runner ${file} input.yaml",
+            "command": "ARVADOS_API_HOST=$(cat ${workspaceFolder}/API_HOST) ARVADOS_API_TOKEN=$(cat ${workspaceFolder}/API_TOKEN) arvados-cwl-runner arvwf:$(cat ${workspaceFolder}/WORKFLOW_UUID) input.yaml",
             "problemMatcher": []
         },
         {
             "label": "upload this CWL workflow to workbench",
             "type": "shell",
-            "command": "ARVADOS_API_HOST=$(cat ${workspaceFolder}/API_HOST) ARVADOS_API_TOKEN=$(cat ${workspaceFolder}/API_TOKEN) arvados-cwl-runner --create-workflow ${file}",
+            "command": "ARVADOS_API_HOST=$(cat ${workspaceFolder}/API_HOST) ARVADOS_API_TOKEN=$(cat ${workspaceFolder}/API_TOKEN) arvados-cwl-runner --create-workflow main.cwl",
             "problemMatcher": []
         },
         {
             "label": "update this existing CWL workflow on workbench",
             "type": "shell",
-            "command": "ARVADOS_API_HOST=$(cat ${workspaceFolder}/API_HOST) ARVADOS_API_TOKEN=$(cat ${workspaceFolder}/API_TOKEN) arvados-cwl-runner --update-workflow $(cat ${workspaceFolder}/WORKFLOW_UUID) ${file}",
+            "command": "ARVADOS_API_HOST=$(cat ${workspaceFolder}/API_HOST) ARVADOS_API_TOKEN=$(cat ${workspaceFolder}/API_TOKEN) arvados-cwl-runner --update-workflow $(cat ${workspaceFolder}/WORKFLOW_UUID) main.cwl",
             "problemMatcher": []
         }
     ]

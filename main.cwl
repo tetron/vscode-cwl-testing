@@ -1,6 +1,12 @@
 cwlVersion: v1.0
-class: CommandLineTool
+label: CWL training workflow
+class: Workflow
 inputs:
   message: string
 outputs: []
-arguments: [echo, $(inputs.message)]
+steps:
+  echo:
+    in:
+      message: message
+    out: []
+    run: echo.cwl
