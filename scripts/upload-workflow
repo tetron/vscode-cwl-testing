@@ -1,0 +1,10 @@
+#!/bin/sh
+set -e
+FILE=$1
+DIR=$(dirname $FILE)
+. $(dirname $0)/setup-env
+if test -s $DIR/WORKFLOW_UUID ; then
+  arvados-cwl-runner --update-workflow $(cat $DIR/WORKFLOW_UUID) $FILE
+else
+  arvados-cwl-runner --create-workflow $FILE > $DIR/WORKFLOW_UUID
+fi

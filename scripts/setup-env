@@ -1,0 +1,5 @@
+test -s API_HOST || (echo "missing API_HOST"; exit 1)
+test -s API_TOKEN || (echo "missing API_TOKEN"; exit 1)
+chmod og-rw API_TOKEN
+export ARVADOS_API_HOST=$(cat API_HOST)
+export ARVADOS_API_TOKEN=$(cat API_TOKEN)
