@@ -5,7 +5,7 @@ inputs:
   message: File
 outputs: []
 steps:
-  echo:
+  rev:
     in:
       message: message
     out: []
