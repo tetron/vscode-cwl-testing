@@ -1,0 +1,11 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "cwl-runner",
+            "type": "shell",
+            "command": "ARVADOS_API_HOST=$(cat ${workspaceFolder}/API_HOST) ARVADOS_API_TOKEN=$(cat ${workspaceFolder}/API_TOKEN) cwl-runner hello.cwl",
+            "problemMatcher": []
+        }
+    ]
+}
