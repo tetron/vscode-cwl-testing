@@ -6,4 +6,4 @@ DIR=$(dirname $FILE)
 if test -s $DIR/input.yaml ; then
     INPUT=$DIR/input.yaml
 fi
-arvados-cwl-runner $FILE $INPUT
+arvados-cwl-runner $PROJECT_UUID $FILE $INPUT
