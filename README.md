@@ -1,13 +1,15 @@
 This document gives step by step instructions to help you get started
 developing CWL workflows on Arvados.
 
-* Install & set up ssh client on Windows
-* Install vscode and relevant extensions
-* Use vscode to connect to an arvados shell node for development
-* Create an simple command line tool, run it, and view the log
-* Upload input, create a command line tool to process it, and view the output
+1. Install & set up ssh client on Windows
+1. Install vscode and relevant extensions
+1. Use vscode to connect to an arvados shell node for development
+1. Create an simple command line tool, run it, and view the log
+1. Upload input, create a command line tool to process it, and view the output
 
-# Windows Setup (Linux and MacOS users can skip this step)
+# Windows SSH Setup
+
+Linux and MacOS users can skip this step.
 
 1. Install git for windows https://git-scm.com/download/win
 1. Open git bash
@@ -27,27 +29,27 @@ developing CWL workflows on Arvados.
 
 1. Install vscode https://code.visualstudio.com/ and start it up
 1. Vscode: go to “Extensions”
-  1. search for “remote development” and install the Remote Development extension pack from Microsoft
+   1. search for “remote development” and install the Remote Development extension pack from Microsoft
 1. Vscode: On the left side bar, choose “Remote explorer”
-  1. In the drop down, choose “SSH targets”
-  1. Click “Add new”
-  1. Enter the “ssh shell…” command line you used in step 1(j)
-  1. Right click the ssh target in the list and select “connect to host in current window”
+   1. In the drop down, choose “SSH targets”
+   1. Click “Add new”
+   1. Enter the “ssh shell…” command line you used in step 1(j)
+   1. Right click the ssh target in the list and select “connect to host in current window”
 1. Vscode: go to “Extensions”
-  1. Search for “benten” and install “CWL (Rabix/Benten)”
-  1. Choose “Install extension on the remote ssh host”
+   1. Search for “benten” and install “CWL (Rabix/Benten)”
+   1. Choose “Install extension on the remote ssh host”
 1. Vscode: On the left side bar, choose “Explorer”
-  1. Select “Clone Repository” and then enter “https://github.com/tetron/vscode-cwl-testing.git”
-  1. Choose “Open”
+   1. Select “Clone Repository” and then enter “https://github.com/tetron/vscode-cwl-testing.git”
+   1. Choose “Open”
 1. Go to Arvados Workbench
-  1. Workbench: In the user menu, select “Current token”
-  1. Vscode: Click on the “Terminal” menu
-  1. Vscode: Click “Run Task…”
-  1. Select “Configure Arvados”
-  1. Workbench: Copy the string following “ARVADOS_API_HOST=”
-  1. Vscode: Paste the string at the “Value for ARVADOS_API_HOST” prompt
-  1. Workbench: Copy the string following “ARVADOS_API_TOKEN=”
-  1. Vscode: Paste the string at the “Value for ARVADOS_API_TOKEN” prompt
+   1. Workbench: In the user menu, select “Current token”
+   1. Vscode: Click on the “Terminal” menu
+   1. Vscode: Click “Run Task…”
+   1. Select “Configure Arvados”
+   1. Workbench: Copy the string following “ARVADOS_API_HOST=”
+   1. Vscode: Paste the string at the “Value for ARVADOS_API_HOST” prompt
+   1. Workbench: Copy the string following “ARVADOS_API_TOKEN=”
+   1. Vscode: Paste the string at the “Value for ARVADOS_API_TOKEN” prompt
 
 # Register & run a workflow
 
@@ -108,7 +110,8 @@ developing CWL workflows on Arvados.
 
 # Register a workflow with default inputs
 
-1. The default value for the “message” parameter will taken from the “lesson3/defaults.yaml” file
+The default value for the “message” parameter will taken from the “lesson3/defaults.yaml” file
+
 1. Workbench: Go to “+NEW” and select “New project”
   1. Enter a name for the project like “Lesson 3”
   1. You should arrive at the panel for the new project
@@ -122,7 +125,8 @@ developing CWL workflows on Arvados.
 
 # Run a workflow without registering it
 
-1. The “message” parameter will be taken from the “lesson4/input.yaml” file.  This is useful during development.
+The “message” parameter will be taken from the “lesson4/input.yaml” file.  This is useful during development.
+
 1. Workbench: Go to “+NEW” and select “New project”
   1. Enter a name for the project like “Lesson 4”
   1. You should arrive at the panel for the new project
