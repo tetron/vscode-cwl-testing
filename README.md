@@ -54,97 +54,97 @@ Linux and MacOS users can skip this step.
 # Register & run a workflow
 
 1. Vscode: Click on the “lesson1/main.cwl” file
-  1. Click on the “Terminal” menu
-  1. Click “Run Task…”
-  1. Select “Register or update CWL workflow on Arvados Workbench”
+   1. Click on the “Terminal” menu
+   1. Click “Run Task…”
+   1. Select “Register or update CWL workflow on Arvados Workbench”
 1. Workbench: Go to “+NEW” and select “New project”
-  1. Enter a name for the project like “Lesson 1”
-  1. You should arrive at the panel for the new project
+   1. Enter a name for the project like “Lesson 1”
+   1. You should arrive at the panel for the new project
 1. Workbench: With “Lesson 1” selected
-  1. Click on “+NEW” and select “Run a process”
-  1. Select “CWL training lesson 1” from the list and click “Next”
-  1. Enter a name for this run like “First training run”
-  1. Enter a message (under “#main/message”) like “Hello world”
-  1. Click “Run process”
-  1. This should take you to a panel showing the workflow run status
+   1. Click on “+NEW” and select “Run a process”
+   1. Select “CWL training lesson 1” from the list and click “Next”
+   1. Enter a name for this run like “First training run”
+   1. Enter a message (under “#main/message”) like “Hello world”
+   1. Click “Run process”
+   1. This should take you to a panel showing the workflow run status
 1. Workbench: workflow run status panel
-  1. Click on the three vertical dots in the top-right corner
-  1. Choose “Log”
-  1. Under “event type” choose “stdout”
-  1. You should see your message
+   1. Click on the three vertical dots in the top-right corner
+   1. Choose “Log”
+   1. Under “event type” choose “stdout”
+   1. You should see your message
 
 # Working with input and output files
 
 1. Vscode: Click on the “lesson2/main.cwl” file
-  1. Click on the “Terminal” menu
-  1. Click “Run Task…”
-  1. Select “Register or update CWL workflow on Arvados Workbench”
+   1. Click on the “Terminal” menu
+   1. Click “Run Task…”
+   1. Select “Register or update CWL workflow on Arvados Workbench”
 1. Go to your desktop
-  1. Using a text editor such as notepad, create a file “message.txt”
-  1. Enter a message like “Hello world” and save
+   1. Using a text editor such as notepad, create a file “message.txt”
+   1. Enter a message like “Hello world” and save
 1. Workbench: Go to “+NEW” and select “New project”
-  1. Enter a name for the project like “Lesson 2”
-  1. You should arrive at the panel for the new project
+   1. Enter a name for the project like “Lesson 2”
+   1. You should arrive at the panel for the new project
 1. Arvados workbench: With “Lesson 2” project selected
-  1. Click on +NEW and select “New collection”
-  1. Call the collection “my message”
-  1. Drag and drop “message.txt” into the browser
-  1. Click “Create a collection”
-  1. The file should be uploaded and then you will be on the collection page
+   1. Click on +NEW and select “New collection”
+   1. Call the collection “my message”
+   1. Drag and drop “message.txt” into the browser
+   1. Click “Create a collection”
+   1. The file should be uploaded and then you will be on the collection page
 1. Workbench: Select the “Lesson 2” project
-  1. Click on “+NEW” and select “Run a process”
-  1. Select “CWL training lesson 2” from the list and click “Next”
-  1. Enter a name for this run like “Second training run”
-  1. Click on “#main/message”
-  1. A selection dialog box will appear
-  1. Navigate to the collection you created in step (13) and choose “message.txt”
-  1. Click “Run process”
-  1. This should take you to a panel showing the workflow run status
+   1. Click on “+NEW” and select “Run a process”
+   1. Select “CWL training lesson 2” from the list and click “Next”
+   1. Enter a name for this run like “Second training run”
+   1. Click on “#main/message”
+   1. A selection dialog box will appear
+   1. Navigate to the collection you created in step (13) and choose “message.txt”
+   1. Click “Run process”
+   1. This should take you to a panel showing the workflow run status
 1. Workbench: workflow run status panel
-  1. Wait for the process to complete
-  1. Click on the dot menu
-  1. Choose “Outputs”
-  1. Right click on “reverse.txt”
-  1. Click on “Download”
-  1. Open the downloaded file.  It should have your results.
+   1. Wait for the process to complete
+   1. Click on the dot menu
+   1. Choose “Outputs”
+   1. Right click on “reverse.txt”
+   1. Click on “Download”
+   1. Open the downloaded file.  It should have your results.
 
 # Register a workflow with default inputs
 
 The default value for the “message” parameter will taken from the “lesson3/defaults.yaml” file
 
 1. Workbench: Go to “+NEW” and select “New project”
-  1. Enter a name for the project like “Lesson 3”
-  1. You should arrive at the panel for the new project
+   1. Enter a name for the project like “Lesson 3”
+   1. You should arrive at the panel for the new project
 1. Workbench: With “Lesson 3” selected
-  1. Click on “+NEW” and select “Run a process”
-  1. Select “CWL training lesson 3” from the list and click “Next”
-  1. Enter a name for this run like “Third training run”
-  1. The “#main/message” parameter will be pre-filled with your default value.  You can choose to change it or use the default.
-  1. Click “Run process”
-  1. This should take you to the status page for this workflow
+   1. Click on “+NEW” and select “Run a process”
+   1. Select “CWL training lesson 3” from the list and click “Next”
+   1. Enter a name for this run like “Third training run”
+   1. The “#main/message” parameter will be pre-filled with your default value.  You can choose to change it or use the default.
+   1. Click “Run process”
+   1. This should take you to the status page for this workflow
 
 # Run a workflow without registering it
 
 The “message” parameter will be taken from the “lesson4/input.yaml” file.  This is useful during development.
 
 1. Workbench: Go to “+NEW” and select “New project”
-  1. Enter a name for the project like “Lesson 4”
-  1. You should arrive at the panel for the new project
-  1. Click on “Additional info” in the upper right to expand the “info” panel
-  1. Under “Project UUID” click the “Copy to clipboard” button
+   1. Enter a name for the project like “Lesson 4”
+   1. You should arrive at the panel for the new project
+   1. Click on “Additional info” in the upper right to expand the “info” panel
+   1. Under “Project UUID” click the “Copy to clipboard” button
 1. Vscode: Select the file “lesson4/main.cwl”
-  1. Click on the “Terminal” menu
-  1. Click “Run Task…”
-  1. Select “Set Arvados project UUID”
-  1. Paste the project UUID from workbench at the prompt
+   1. Click on the “Terminal” menu
+   1. Click “Run Task…”
+   1. Select “Set Arvados project UUID”
+   1. Paste the project UUID from workbench at the prompt
 1. Vscode: Select the file “lesson4/main.cwl”
-  1. Click on the “Terminal” menu
-  1. Click “Run Task…”
-  1. Select “Run CWL workflow on Arvados”
+   1. Click on the “Terminal” menu
+   1. Click “Run Task…”
+   1. Select “Run CWL workflow on Arvados”
 1. Vscode: In the bottom panel select the “Terminal” tab
-  1. In the upper right corner of the Terminal tab select “Task - Run CWL Workflow” from the drop-down
-  1. Look for logging text like “submitted container_request pirca-xvhdp-hlp14qfnc8eb189”
-  1. Highlight and copy the workflow identifier (this the string containing -xvhdp- in the middle)
-  1. The results of this run will appear in the terminal when the run completes.
+   1. In the upper right corner of the Terminal tab select “Task - Run CWL Workflow” from the drop-down
+   1. Look for logging text like “submitted container_request pirca-xvhdp-hlp14qfnc8eb189”
+   1. Highlight and copy the workflow identifier (this the string containing -xvhdp- in the middle)
+   1. The results of this run will appear in the terminal when the run completes.
 1. Workbench: Paste the workflow identifier into the search box
-  1. This will take you to the status page for this workflow
+   1. This will take you to the status page for this workflow
