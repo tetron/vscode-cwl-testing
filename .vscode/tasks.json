@@ -12,6 +12,12 @@
             "type": "shell",
             "command": "scripts/upload-workflow ${file}",
             "problemMatcher": []
+        },
+        {
+            "label": "Configure Arvados",
+            "type": "shell",
+            "command": "scripts/configure-arv ${input:api_host} ${input:api_token}",
+            "problemMatcher": []
         }
     ]
 }
