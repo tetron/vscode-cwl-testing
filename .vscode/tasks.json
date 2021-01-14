@@ -19,5 +19,18 @@
             "command": "scripts/configure-arv ${input:api_host} ${input:api_token}",
             "problemMatcher": []
         }
+    ],
+    "inputs": [
+        {
+            "id": "api_host",
+            "type": "promptString",
+            "description": "Value for ARVADOS_API_HOST"
+        },
+        {
+            "id": "api_token",
+            "type": "promptString",
+            "description": "Value for ARVADOS_API_TOKEN",
+            "password": true
+        }
     ]
 }
